@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planadas · Tolima, Colombia — Café de origen</title>
+  <meta name="description" content="Planadas, sur del Tolima, Colombia. Rutas cafeteras, cultura Nasa, cocina tolimense y experiencias comunitarias en la Cordillera Central.">
+  <meta name="theme-color" content="#1E1511">
+  <link rel="icon" type="image/png" href="img/logo-96.png">
+  <link rel="apple-touch-icon" href="img/logo-256.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader">
+    <img class="loader__logo" src="img/logo-256.png" width="256" height="256" alt="">
+    <div class="loader__flag" aria-hidden="true"><i></i><i></i><i></i></div>
+    <p class="label loader__eyebrow">Sur del Tolima &nbsp;·&nbsp; República de Colombia</p>
+    <h1 class="loader__title" data-split>Planadas</h1>
+    <div class="loader__meter">
+      <span class="loader__alt" id="loaderAlt">0</span>
+      <span class="loader__unit">m s.n.m.</span>
+    </div>
+    <div class="loader__line"><i id="loaderBar"></i></div>
+    <div class="loader__choice" id="loaderChoice">
+      <button class="btn-line" data-enter="sound">Entrar con sonido</button>
+      <span class="loader__or">o</span>
+      <button class="btn-line btn-line--quiet" data-enter="silent">en silencio</button>
+    </div>
+    <p class="loader__hint">La montaña se escucha mejor con audífonos</p>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__ring"><em class="cursor__txt"></em></span><span class="cursor__dot"></span></div>
+
+  <!-- ============ TOPBAR ============ -->
+  <header class="topbar" id="topbar">
+    <a href="#inicio" class="brand" data-link>
+      <img class="brand__logo" src="img/logo-96.png" width="96" height="96" alt="Logo de Planadas: café, naturaleza, personas">
+      <span class="brand__word">Planadas<em>Tolima · Colombia</em></span>
+    </a>
+    <div class="topbar__coords"><span aria-hidden="true">3°11′ N</span><i></i><span aria-hidden="true">75°39′ O</span><a href="#viaje" class="wx-chip" id="wxChip" data-link hidden><span class="wx-chip__icon" id="wxChipIcon"></span><b id="wxChipTemp">—</b><em id="wxChipText"></em></a></div>
+    <div class="topbar__right">
+      <button class="lang" id="langBtn" type="button" aria-label="Cambiar idioma / Change language"><span data-l="es">ES</span><i></i><span data-l="en">EN</span></button>
+      <a href="#contacto" class="topbar__cta" data-link>Planear visita</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="indexMenu">
+        <span class="menu-btn__label" data-open="Índice" data-close="Cerrar">Índice</span>
+        <span class="menu-btn__lines"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MENÚ ÍNDICE ============ -->
+  <nav class="index" id="indexMenu" aria-hidden="true">
+    <div class="index__bg"></div>
+    <div class="index__inner">
+      <div class="index__col">
+        <p class="label index__eyebrow">Índice del viaje</p>
+        <ol class="index__list">
+          <li><a href="#inicio" data-link data-preview="img/fotos/hero.jpg" data-label="La montaña"><span class="index__num">I</span><span class="index__name">Inicio</span><span class="index__meta">La montaña</span></a></li>
+          <li><a href="#parque" data-link data-preview="img/fotos/iglesia%201.jpeg" data-label="Parque central"><span class="index__num">II</span><span class="index__name">Parque central</span><span class="index__meta">El corazón</span></a></li>
+          <li><a href="#rutas" data-link data-preview="img/fotos/ruta-1.jpg" data-label="Rutas cafeteras"><span class="index__num">III</span><span class="index__name">Rutas cafeteras</span><span class="index__meta">Cuatro caminos</span></a></li>
+          <li><a href="#cultura" data-link data-preview="img/fotos/cultura-1.jpg" data-label="Cultura"><span class="index__num">IV</span><span class="index__name">Cultura</span><span class="index__meta">Memoria viva</span></a></li>
+          <li><a href="#comida" data-link data-preview="img/fotos/comida-1.jpg" data-label="Comida"><span class="index__num">V</span><span class="index__name">Comida</span><span class="index__meta">La carta</span></a></li>
+          <li><a href="#experiencias" data-link data-preview="img/fotos/exp-1.jpg" data-label="Experiencias"><span class="index__num">VI</span><span class="index__name">Experiencias comunitarias</span><span class="index__meta">Con la gente</span></a></li>
+          <li><a href="#eventos" data-link data-preview="img/fotos/evento-1.jpg" data-label="Eventos"><span class="index__num">VII</span><span class="index__name">Eventos</span><span class="index__meta">Almanaque</span></a></li>
+          <li><a href="#mapa" data-link data-preview="img/fotos/mapa.jpg" data-label="Mapa"><span class="index__num">VIII</span><span class="index__name">Mapa</span><span class="index__meta">Cómo llegar</span></a></li>
+          <li><a href="#viaje" data-link data-preview="img/fotos/ruta-2.jpg" data-label="Planea tu viaje"><span class="index__num">IX</span><span class="index__name">Planea tu viaje</span><span class="index__meta">Clima y consejos</span></a></li>
+          <li><a href="#contacto" data-link data-preview="img/fotos/contacto.jpg" data-label="Contacto"><span class="index__num">X</span><span class="index__name">Contacto</span><span class="index__meta">Escríbenos</span></a></li>
+        </ol>
+      </div>
+      <aside class="index__aside">
+        <figure class="ph index__preview" id="indexPreview" data-src="img/fotos/hero.jpg" data-label="La montaña"><div class="ph__img"></div></figure>
+        <div class="index__foot index__social">
+          <p><em>Planadas, Tolima</em><br>Cordillera Central de los Andes<br><a href="mailto:hola@visitaplanadas.co">hola@visitaplanadas.co</a></p>
+          <div class="flagline" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+      </aside>
+    </div>
+  </nav>
+
+  <!-- ============ CONTROLES FIJOS ============ -->
+  <button class="sound" id="soundBtn" aria-pressed="false" aria-label="Activar o silenciar el sonido ambiente">
+    <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="sound__txt">
+      <span class="sound__state" id="soundState">Sonido apagado</span>
+      <span class="sound__scene" id="soundScene">Bosque de niebla</span>
+    </span>
+  </button>
+
+  <div class="rail" aria-hidden="true">
+    <span class="rail__num" id="railNum">I</span>
+    <span class="rail__line"><i id="railProg"></i></span>
+    <span class="rail__name" id="railName">Inicio</span>
+  </div>
+
+  <main id="smooth">
+
+    <!-- ============ I · HERO ============ -->
+    <section class="hero" id="inicio" data-section="Inicio" data-num="I" data-ambience="forest">
+      <div class="hero__sky"></div>
+      <div class="hero__sun" data-depth=".15"></div>
+
+      <svg class="hero__ridge hero__ridge--far" data-depth=".55" data-mouse="6" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path d="M0,500 Q110,420 230,462 T470,410 T700,448 T930,372 T1190,436 T1440,392 V800 H0Z"/>
+      </svg>
+      <svg class="hero__ridge hero__ridge--mid" data-depth=".4" data-mouse="12" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path d="M0,580 Q150,492 310,552 T620,512 T910,574 T1190,494 T1440,552 V800 H0Z"/>
+      </svg>
+
+      <figure class="ph hero__arch" data-depth=".3" data-src="img/fotos/hero.jpg" data-label="Cafetales al amanecer" data-cursor="Planadas"><div class="ph__img"></div></figure>
+
+      <div class="hero__title" data-depth=".22">
+        <p class="label hero__eyebrow">Sur del Tolima &nbsp;—&nbsp; Cordillera Central &nbsp;—&nbsp; Colombia</p>
+        <h2 class="hero__word" data-split>Planadas</h2>
+        <p class="hero__sub"><em>donde la montaña</em> se sirve en taza</p>
+      </div>
+
+      <svg class="hero__ridge hero__ridge--near" data-depth=".12" data-mouse="20" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <pattern id="coffeeRows" width="18" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+            <circle cx="4" cy="6" r="2.4" fill="rgba(30,21,17,.18)"/>
+            <circle cx="13" cy="6" r="2.4" fill="rgba(30,21,17,.12)"/>
+          </pattern>
+        </defs>
+        <path d="M0,660 Q180,576 360,636 T720,604 T1080,658 T1440,612 V800 H0Z"/>
+        <path d="M0,660 Q180,576 360,636 T720,604 T1080,658 T1440,612 V800 H0Z" fill="url(#coffeeRows)"/>
+      </svg>
+      <svg class="hero__ridge hero__ridge--front" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <path d="M0,738 Q210,676 430,722 T860,702 T1270,742 T1440,724 V800 H0Z"/>
+      </svg>
+
+      <div class="hero__mist hero__mist--a" aria-hidden="true"></div>
+      <div class="hero__mist hero__mist--b" aria-hidden="true"></div>
+
+      <svg class="seal hero__seal" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="sealCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <g class="seal__spin">
+          <text><textPath href="#sealCircle" textLength="486" lengthAdjust="spacing">CAFÉ DE ORIGEN · PLANADAS · TOLIMA · COLOMBIA ·</textPath></text>
+        </g>
+        <circle cx="100" cy="100" r="60" class="seal__ring"/>
+        <g transform="translate(100 100) rotate(-28)" class="seal__bean">
+          <ellipse rx="20" ry="28"/>
+          <path d="M3,-27 C-11,-9 11,9 -3,27"/>
+        </g>
+      </svg>
+
+      <a href="#mundo" class="hero__cue" data-link>
+        <span>Desciende</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- ============ DEL MUNDO A LA MONTAÑA ============ -->
+    <section class="globe" id="mundo" data-section="Del mundo a Planadas" data-num="I" data-ambience="wind">
+      <div class="globe__stage">
+        <div id="globeViz" role="img" aria-label="Globo terráqueo que se acerca hasta Planadas, Tolima, Colombia"></div>
+        <div class="globe__shade" aria-hidden="true"></div>
+        <div class="globe__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+        <div class="globe__hud" aria-hidden="true">
+          <div><span>Latitud</span><b id="hudLat">—</b></div>
+          <div><span>Longitud</span><b id="hudLon">—</b></div>
+          <div><span>Altura de vista</span><b id="hudAlt">—</b></div>
+        </div>
+
+        <div class="globe__captions">
+          <div class="gcap" data-from="0" data-to=".17">
+            <p class="label">Capítulo cero</p>
+            <h2>Un planeta.<br><em>Un grano.</em></h2>
+          </div>
+          <div class="gcap" data-from=".2" data-to=".4">
+            <p class="label">Hemisferio occidental</p>
+            <h2>Sudamérica,<br><em>donde nace el café suave</em></h2>
+          </div>
+          <div class="gcap gcap--co" data-from=".43" data-to=".62">
+            <div class="flagline" aria-hidden="true"><i></i><i></i><i></i></div>
+            <p class="label">República de</p>
+            <h2>Colombia</h2>
+          </div>
+          <div class="gcap" data-from=".65" data-to=".82">
+            <p class="label">Departamento del</p>
+            <h2>Tolima<br><em>Cordillera Central</em></h2>
+          </div>
+          <div class="gcap gcap--final" data-from=".85" data-to="1.01">
+            <p class="label">3°11′ N &nbsp;·&nbsp; 75°39′ O</p>
+            <h2>Planadas</h2>
+            <p class="gcap__note"><em>La capital cafetera del sur del Tolima</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANIFIESTO ============ -->
+    <section class="manifesto" data-section="Manifiesto" data-num="I" data-ambience="forest">
+      <figure class="ph manifesto__ph manifesto__ph--a" data-speed="-.18" data-src="img/fotos/manifiesto-1.jpg" data-label="Manos recolectando"><div class="ph__img"></div></figure>
+      <figure class="ph manifesto__ph manifesto__ph--b" data-speed=".22" data-src="img/fotos/manifiesto-2.jpg" data-label="Granos en el secadero"><div class="ph__img"></div></figure>
+
+      <div class="manifesto__inner">
+        <p class="label"><span class="label__rule"></span>Manifiesto</p>
+        <p class="manifesto__text" data-words data-lang="es" translate="no">
+          En el sur del Tolima, donde la Cordillera Central se pliega en cañones y neblina,
+          un pueblo entero aprendió a leer la montaña a través de un grano.
+          Aquí el café no es un producto: es la manera de saludar, de trabajar,
+          de celebrar y de recordar.
+        </p>
+        <p class="manifesto__text" data-words data-lang="en" translate="no">
+          In southern Tolima, where the Central Andes fold into canyons and mist,
+          an entire town learned to read the mountain through a single bean.
+          Here coffee is not a product: it is the way we greet, work,
+          celebrate and remember.
+        </p>
+
+        <dl class="facts">
+          <div class="fact"><dt>Altura de los cafetales</dt><dd>1.400<small>—</small>2.200<sup>m</sup></dd></div>
+          <div class="fact"><dt>Clima de la cabecera</dt><dd><small>≈</small>21<sup>°C</sup></dd></div>
+          <div class="fact"><dt>Pueblos que lo habitan</dt><dd>Campesino <em>&amp;</em> Nasa</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Marquesina -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Café de altura</span><b></b><span>Tierra Nasa</span><b></b><span>Río Atá</span><b></b><span>Nevado del Huila</span><b></b><span>Cordillera Central</span><b></b>
+        <span>Café de altura</span><b></b><span>Tierra Nasa</span><b></b><span>Río Atá</span><b></b><span>Nevado del Huila</span><b></b><span>Cordillera Central</span><b></b>
+      </div>
+    </div>
+
+    <!-- ============ II · PARQUE CENTRAL ============ -->
+    <section class="plaza" id="parque" data-section="Parque central" data-num="II" data-ambience="plaza">
+
+      <!-- Entrada: la iglesia se abre como un arco -->
+      <div class="plaza__intro">
+        <div class="plaza__stage">
+          <div class="plaza__window">
+            <figure class="ph plaza__img" data-src="img/fotos/iglesia%201.jpeg" data-label="Iglesia y parque principal"><div class="ph__img"></div></figure>
+            <div class="plaza__veil"></div>
+          </div>
+          <p class="label plaza__eyebrow"><span class="label__rule"></span>II &nbsp;·&nbsp; Parque central</p>
+          <h2 class="plaza__title" aria-label="El Parque, corazón de Planadas">
+            <span class="plaza__t1">El Parque</span>
+            <span class="plaza__t2"><em>corazón de Planadas</em></span>
+          </h2>
+          <div class="plaza__coords" aria-hidden="true">
+            <span>Plaza principal</span><i></i><span>Planadas · Tolima</span>
+          </div>
+          <p class="plaza__caption">Aquí empieza y termina todo viaje: el tinto de la mañana, el mercado del domingo, las fiestas de junio y las campanas que marcan la hora.</p>
+        </div>
+      </div>
+
+      <!-- Galería al aire libre -->
+      <div class="plaza__gallery" id="parqueGaleria">
+        <div class="plaza__light" aria-hidden="true"></div>
+        <header class="plaza__ghead">
+          <p class="label label--light"><span class="label__rule"></span>Galería al aire libre</p>
+          <h3 class="display display--light">Piedra, bronce <em>y memoria</em></h3>
+          <p class="lede lede--light">Tres monumentos cuentan quiénes fundaron el pueblo, a quién se recuerda y qué se celebra. Recórrelos despacio: cada uno tiene su historia.</p>
+        </header>
+
+        <div class="pieces">
+          <article class="piece">
+            <div class="piece__frame">
+              <figure class="ph piece__ph" data-src="img/fotos/estatua_3.jpg" data-label="Monumento Los Fundadores" data-cursor="Pieza I"><div class="ph__img"></div></figure>
+            </div>
+            <div class="piece__plate">
+              <span class="piece__no">Pieza I</span>
+              <h4>Los Fundadores</h4>
+              <p>La figura campesina con sombrero y bastón preside el Parque Los Fundadores. En su pedestal, una placa guarda los nombres de las familias que abrieron el pueblo en la montaña.</p>
+              <dl><dt>Lugar</dt><dd>Parque Los Fundadores</dd></dl>
+            </div>
+          </article>
+
+          <article class="piece piece--mid">
+            <div class="piece__frame">
+              <figure class="ph piece__ph" data-src="img/fotos/estatua_1.jpg" data-label="Grupo escultórico de la familia" data-cursor="Pieza II"><div class="ph__img"></div></figure>
+            </div>
+            <div class="piece__plate">
+              <span class="piece__no">Pieza II</span>
+              <h4>La familia</h4>
+              <p>Padres, abuelos e hijos abrazados en una sola pieza. Un homenaje a la familia que sostiene la vida de las veredas y de la cosecha.</p>
+              <dl><dt>Lugar</dt><dd>Parque principal</dd></dl>
+            </div>
+          </article>
+
+          <article class="piece">
+            <div class="piece__frame">
+              <figure class="ph piece__ph" data-src="img/fotos/estatua_2.jpg" data-label="Busto a José Farid Sánchez" data-cursor="Pieza III"><div class="ph__img"></div></figure>
+            </div>
+            <div class="piece__plate">
+              <span class="piece__no">Pieza III</span>
+              <h4>Busto a José Farid Sánchez</h4>
+              <p>Rodeado de árboles, el busto recuerda a un personaje querido de la historia local. Un punto de encuentro y de memoria en medio del verde.</p>
+              <dl><dt>Lugar</dt><dd>Parque principal</dd></dl>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- La iglesia -->
+      <div class="plaza__church">
+        <figure class="ph church__ph" data-src="img/fotos/iglesia.jpg" data-label="La iglesia del parque" data-cursor="Iglesia"><div class="ph__img"></div></figure>
+
+        <div class="church__body">
+          <p class="label"><span class="label__rule"></span>El templo</p>
+          <h3 class="display">La iglesia <em>del parque</em></h3>
+          <p class="church__text">Su campanario rojizo y su fachada blanca se ven desde casi cualquier esquina del pueblo. Frente a ella ondea la bandera, pasan las procesiones y se reúnen las familias después de misa. Es la foto obligada de todo el que llega a Planadas.</p>
+
+          <button class="bell" id="bellBtn" type="button" aria-label="Tocar la campana">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8c-2 0-3 1.4-3 3v1.6C20.7 14 16 21 16 30v10l-5 6v2h42v-2l-5-6V30c0-9-4.7-16-13-17.4V11c0-1.6-1-3-3-3z"/><path d="M26 52a6 6 0 0 0 12 0"/></svg>
+            <span><b>Tocar la campana</b><em>con sonido</em></span>
+          </button>
+
+          <ol class="plaza__tips">
+            <li><span>01</span><div><b>Un tinto en las bancas</b>Las mañanas en el parque huelen a café recién colado.</div></li>
+            <li><span>02</span><div><b>Domingo de mercado</b>Las veredas bajan con frutas, panela y café en grano.</div></li>
+            <li><span>03</span><div><b>Atardecer desde el atrio</b>La luz dorada sobre las montañas que rodean el pueblo.</div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ III · RUTAS CAFETERAS ============ -->
+    <section class="routes" id="rutas" data-section="Rutas cafeteras" data-num="III" data-ambience="forest">
+      <div class="routes__track">
+        <svg class="routes__path" aria-hidden="true"><path id="routesPath"/></svg>
+
+        <header class="routes__intro">
+          <p class="label"><span class="label__rule"></span>III &nbsp;·&nbsp; Rutas cafeteras</p>
+          <h2 class="display">Cuatro caminos<br><em>hacia una taza</em></h2>
+          <p class="lede">Senderos de herradura, trochas entre guamos y fincas familiares que abren su puerta. Cada ruta es un capítulo del mismo libro: la altura, el agua y las manos.</p>
+          <p class="routes__hint"><span>Desliza</span><i></i></p>
+        </header>
+
+        <article class="route">
+          <figure class="ph route__ph" data-src="img/fotos/ruta-1.jpg" data-label="Ruta del Origen" data-cursor="Ruta I"><div class="ph__img"></div></figure>
+          <div class="route__body">
+            <span class="route__num">I</span>
+            <h3>Ruta del Origen</h3>
+            <p>De la cabecera a las veredas altas: fincas donde se recolecta a mano, se despulpa con agua de quebrada y se seca al sol en marquesinas.</p>
+            <ul class="route__meta">
+              <li><span>Altura</span>1.450 — 1.900 m</li>
+              <li><span>Duración</span>Día completo</li>
+              <li><span>Ritmo</span>Suave</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="route route--alt">
+          <figure class="ph route__ph" data-src="img/fotos/ruta-2.jpg" data-label="Ruta de Gaitania" data-cursor="Ruta II"><div class="ph__img"></div></figure>
+          <div class="route__body">
+            <span class="route__num">II</span>
+            <h3>Camino a Gaitania</h3>
+            <p>Hacia el corregimiento de Gaitania, territorio del pueblo Nasa, donde el café crece entre saberes ancestrales y paisajes de páramo a la vista.</p>
+            <ul class="route__meta">
+              <li><span>Altura</span>1.600 — 2.200 m</li>
+              <li><span>Duración</span>Dos días</li>
+              <li><span>Ritmo</span>Moderado</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="route">
+          <figure class="ph route__ph" data-src="img/fotos/rio.jpeg" data-label="Ruta del Río Atá" data-cursor="Ruta III"><div class="ph__img"></div></figure>
+          <div class="route__body">
+            <span class="route__num">III</span>
+            <h3>Ruta del Río Atá</h3>
+            <p>Cafetales de ladera que bajan hasta el río. Charcos de agua fría, puentes colgantes y almuerzo de fogón en la orilla.</p>
+            <ul class="route__meta">
+              <li><span>Altura</span>1.200 — 1.700 m</li>
+              <li><span>Duración</span>Medio día</li>
+              <li><span>Ritmo</span>Suave</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="route route--alt">
+          <figure class="ph route__ph" data-src="img/fotos/mujeres_cafeteras.jpg" data-label="Mujeres cafeteras" data-cursor="Ruta IV"><div class="ph__img"></div></figure>
+          <div class="route__body">
+            <span class="route__num">IV</span>
+            <h3>Ruta de las Mujeres Cafeteras</h3>
+            <p>Asociaciones de productoras que tuestan, empacan y cuentan su propia historia. Termina en una mesa de cata con los lotes de la temporada.</p>
+            <ul class="route__meta">
+              <li><span>Altura</span>1.500 — 2.000 m</li>
+              <li><span>Duración</span>Día completo</li>
+              <li><span>Ritmo</span>Suave</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="routes__end">
+          <p class="label">Fin del camino</p>
+          <p class="routes__endtxt"><em>Todas las rutas</em><br>terminan en una taza.</p>
+          <a href="#contacto" class="btn-line" data-link>Reservar una ruta</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO / CINE ============ -->
+    <section class="cinema" id="origen" data-section="Del grano a la taza" data-num="III" data-ambience="none">
+      <div class="cinema__stage">
+        <div class="cinema__media">
+          <video id="cinemaVideo" src="img/gemini_generated_video_d410e3ed.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="cinema__shade"></div>
+        </div>
+        <h2 class="cinema__title" aria-label="Del grano a la taza">
+          <span class="cinema__l">Del grano</span>
+          <span class="cinema__r"><em>a la taza</em></span>
+        </h2>
+        <div class="cinema__foot">
+          <p class="label">Película · Planadas, Tolima</p>
+          <button class="btn-line btn-line--light" id="videoSound" aria-pressed="false">Escuchar la película</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IV · CULTURA ============ -->
+    <section class="culture" id="cultura" data-section="Cultura" data-num="IV" data-ambience="strings">
+      <header class="culture__head">
+        <p class="label"><span class="label__rule"></span>IV &nbsp;·&nbsp; Cultura</p>
+        <h2 class="display">Memoria <em>que se canta,</em><br>se teje y se baila</h2>
+      </header>
+
+      <div class="culture__grid">
+        <div class="culture__sticky">
+          <div class="culture__stack">
+            <figure class="ph culture__ph is-active" data-src="img/fotos/baile.jpg" data-label="Bambuco y rajaleña"><div class="ph__img"></div></figure>
+            <figure class="ph culture__ph" data-src="img/fotos/cultura-2.jpg" data-label="Pueblo Nasa"><div class="ph__img"></div></figure>
+            <figure class="ph culture__ph" data-src="img/fotos/tejidos.jpg" data-label="Tejido y artesanía"><div class="ph__img"></div></figure>
+            <figure class="ph culture__ph" data-src="img/fotos/san_pedro.jpg" data-label="Fiestas de San Pedro"><div class="ph__img"></div></figure>
+            <span class="culture__counter"><b id="cultureIdx">01</b> / 04</span>
+          </div>
+        </div>
+
+        <div class="culture__list">
+          <article class="culture__item">
+            <span class="culture__n">01</span>
+            <h3>Bambuco <em>y rajaleña</em></h3>
+            <p>El tiple, la bandola y la guacharaca marcan el compás del sur del Tolima. La rajaleña, copla pícara e improvisada, todavía se canta en veredas y fiestas patronales.</p>
+            <p class="culture__aside">Con sonido activo suena «Ingrata», grabada en 1922 por Jorge Áñez y Alcides Briceño, pioneros de la música andina colombiana.</p>
+          </article>
+          <article class="culture__item">
+            <span class="culture__n">02</span>
+            <h3>Pueblo <em>Nasa</em></h3>
+            <p>En Gaitania y sus alrededores, comunidades Nasa conservan su lengua, el nasa yuwe, su medicina tradicional y una relación con el territorio que también se siente en la manera de cultivar.</p>
+            <p class="culture__aside">Toda visita a territorio indígena se hace con acompañamiento y permiso de la comunidad.</p>
+          </article>
+          <article class="culture__item">
+            <span class="culture__n">03</span>
+            <h3>Tejido <em>y artesanía</em></h3>
+            <p>Mochilas, chumbes y canastos de fibra natural. Piezas lentas, hechas en casa, que llevan los colores de la montaña y los símbolos de quien las teje.</p>
+          </article>
+          <article class="culture__item">
+            <span class="culture__n">04</span>
+            <h3>Fiestas <em>de San Pedro</em></h3>
+            <p>Junio llega con reinados, cabalgatas, sanjuanero y lechona compartida. Es la temporada en que el pueblo entero sale a la plaza.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ V · COMIDA ============ -->
+    <section class="food" id="comida" data-section="Comida" data-num="V" data-ambience="fire">
+      <div class="food__inner">
+        <header class="food__head">
+          <p class="label label--light"><span class="label__rule"></span>V &nbsp;·&nbsp; Comida</p>
+          <h2 class="display display--light">La carta<br><em>de la montaña</em></h2>
+          <p class="lede lede--light">Cocina de fogón de leña, maíz, plátano y paciencia. Pasa el cursor sobre cada plato.</p>
+        </header>
+
+        <div class="menu">
+          <div class="menu__col">
+            <h3 class="menu__title">Del fogón</h3>
+            <div class="dish" data-src="img/fotos/comida-1.jpg" data-label="Lechona tolimense">
+              <div class="dish__row"><span class="dish__name">Lechona tolimense</span><i></i><span class="dish__tag">Plato insignia</span></div>
+              <p class="dish__desc">Cerdo relleno de arveja amarilla, arroz y especias, horneado toda la noche.</p>
+            </div>
+            <div class="dish" data-src="img/fotos/comida-2.jpg" data-label="Tamal tolimense">
+              <div class="dish__row"><span class="dish__name">Tamal tolimense</span><i></i><span class="dish__tag">Domingo</span></div>
+              <p class="dish__desc">Envuelto en hoja de plátano, con huevo, arveja y la mejor chocolatada al lado.</p>
+            </div>
+            <div class="dish" data-src="img/fotos/comida-3.jpg" data-label="Sancocho de gallina">
+              <div class="dish__row"><span class="dish__name">Sancocho de gallina</span><i></i><span class="dish__tag">Al río</span></div>
+              <p class="dish__desc">Gallina criolla, yuca, plátano y mazorca, cocinados en olla de barro.</p>
+            </div>
+
+            <h3 class="menu__title">Del maíz</h3>
+            <div class="dish" data-src="img/fotos/comida-4.jpg" data-label="Envueltos de mazorca">
+              <div class="dish__row"><span class="dish__name">Envueltos de mazorca</span><i></i><span class="dish__tag">Tarde</span></div>
+              <p class="dish__desc">Maíz tierno molido, dulce y salado a la vez, en su propia hoja.</p>
+            </div>
+            <div class="dish" data-src="img/fotos/comida-5.jpg" data-label="Arepa de maíz pelao">
+              <div class="dish__row"><span class="dish__name">Arepa de maíz pelao</span><i></i><span class="dish__tag">Desayuno</span></div>
+              <p class="dish__desc">Asada en tiesto, con quesillo fresco de la finca.</p>
+            </div>
+          </div>
+
+          <div class="menu__col">
+            <h3 class="menu__title">Dulce y compartido</h3>
+            <div class="dish" data-src="img/fotos/comida-6.jpg" data-label="Bizcochos de achira">
+              <div class="dish__row"><span class="dish__name">Bizcochos de achira</span><i></i><span class="dish__tag">Para el camino</span></div>
+              <p class="dish__desc">Crocantes, de almidón de achira y queso, horneados en horno de barro.</p>
+            </div>
+            <div class="dish" data-src="img/fotos/comida-7.jpg" data-label="Insulso">
+              <div class="dish__row"><span class="dish__name">Insulso</span><i></i><span class="dish__tag">Fiestas</span></div>
+              <p class="dish__desc">Dulce de maíz y panela, envuelto en hoja de bijao.</p>
+            </div>
+
+            <h3 class="menu__title">En la taza</h3>
+            <div class="dish" data-src="img/fotos/comida-8.jpg" data-label="Café de especialidad">
+              <div class="dish__row"><span class="dish__name">Café de especialidad</span><i></i><span class="dish__tag">Lote de temporada</span></div>
+              <p class="dish__desc">Filtrado lento, sin azúcar, para encontrar la panela y la fruta del grano.</p>
+            </div>
+            <div class="dish" data-src="img/fotos/comida-9.jpg" data-label="Tinto campesino">
+              <div class="dish__row"><span class="dish__name">Tinto campesino</span><i></i><span class="dish__tag">Siempre</span></div>
+              <p class="dish__desc">En olleta, con panela, a cualquier hora y para cualquier visita.</p>
+            </div>
+
+            <div class="cupping">
+              <p class="cupping__title"><em>Ficha de cata</em> · Planadas</p>
+              <ul>
+                <li><span>Aroma</span><b style="--v:.9"></b><em>Panela, flores</em></li>
+                <li><span>Acidez</span><b style="--v:.82"></b><em>Brillante, cítrica</em></li>
+                <li><span>Cuerpo</span><b style="--v:.7"></b><em>Sedoso</em></li>
+                <li><span>Final</span><b style="--v:.86"></b><em>Chocolate, largo</em></li>
+              </ul>
+              <p class="cupping__note">Referencial. Cada finca y cada cosecha cuentan algo distinto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <figure class="ph dish-float" id="dishFloat" data-label="Plato" aria-hidden="true"><div class="ph__img"></div></figure>
+    </section>
+
+    <!-- ============ VI · EXPERIENCIAS COMUNITARIAS ============ -->
+    <section class="exp" id="experiencias" data-section="Experiencias comunitarias" data-num="VI" data-ambience="river">
+      <header class="exp__head">
+        <p class="label"><span class="label__rule"></span>VI &nbsp;·&nbsp; Experiencias comunitarias</p>
+        <h2 class="display">Postales <em>que se viven</em></h2>
+        <p class="lede">Turismo hecho con y por la comunidad. Lo que pagas se queda en las familias, asociaciones y resguardos que te reciben.</p>
+      </header>
+
+      <div class="exp__stack">
+        <article class="postcard">
+          <figure class="ph postcard__ph" data-src="img/fotos/familia_cafetera.jpg" data-label="Recolección con una familia"><div class="ph__img"></div></figure>
+          <div class="postcard__body">
+            <div class="stamp" aria-hidden="true"><span>Planadas</span><b>I</b><span>Tolima</span></div>
+            <svg class="postmark" viewBox="0 0 160 80" aria-hidden="true"><circle cx="40" cy="40" r="30"/><circle cx="40" cy="40" r="23"/><path d="M76 22 q12 -8 24 0 t24 0 t24 0 M76 34 q12 -8 24 0 t24 0 t24 0 M76 46 q12 -8 24 0 t24 0 t24 0 M76 58 q12 -8 24 0 t24 0 t24 0"/></svg>
+            <p class="label">Postal I · Cosecha</p>
+            <h3>Recolectar con una familia cafetera</h3>
+            <p>Canasto a la cintura, madrugada y almuerzo en la finca. Aprendes a elegir solo el grano rojo, maduro, como lo hacen desde hace generaciones.</p>
+            <ul class="postcard__lines">
+              <li><span>Duración</span>Una jornada</li>
+              <li><span>Con</span>Familias productoras</li>
+              <li><span>Temporada</span>Abril — junio · Octubre — diciembre</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="postcard">
+          <figure class="ph postcard__ph" data-src="img/fotos/cata.jpg" data-label="Taller de tostión y cata"><div class="ph__img"></div></figure>
+          <div class="postcard__body">
+            <div class="stamp" aria-hidden="true"><span>Planadas</span><b>II</b><span>Tolima</span></div>
+            <svg class="postmark" viewBox="0 0 160 80" aria-hidden="true"><circle cx="40" cy="40" r="30"/><circle cx="40" cy="40" r="23"/><path d="M76 22 q12 -8 24 0 t24 0 t24 0 M76 34 q12 -8 24 0 t24 0 t24 0 M76 46 q12 -8 24 0 t24 0 t24 0 M76 58 q12 -8 24 0 t24 0 t24 0"/></svg>
+            <p class="label">Postal II · Taza</p>
+            <h3>Taller de tostión y cata</h3>
+            <p>Del grano verde al tueste medio. Sorbes con cuchara como los catadores y descubres por qué el café de estas montañas llega a mesas del mundo entero.</p>
+            <ul class="postcard__lines">
+              <li><span>Duración</span>Tres horas</li>
+              <li><span>Con</span>Asociaciones de productores</li>
+              <li><span>Temporada</span>Todo el año</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="postcard">
+          <figure class="ph postcard__ph" data-src="img/fotos/manillas.jpg" data-label="Tejido con mujeres Nasa"><div class="ph__img"></div></figure>
+          <div class="postcard__body">
+            <div class="stamp" aria-hidden="true"><span>Planadas</span><b>III</b><span>Tolima</span></div>
+            <svg class="postmark" viewBox="0 0 160 80" aria-hidden="true"><circle cx="40" cy="40" r="30"/><circle cx="40" cy="40" r="23"/><path d="M76 22 q12 -8 24 0 t24 0 t24 0 M76 34 q12 -8 24 0 t24 0 t24 0 M76 46 q12 -8 24 0 t24 0 t24 0 M76 58 q12 -8 24 0 t24 0 t24 0"/></svg>
+            <p class="label">Postal III · Territorio</p>
+            <h3>Tejer y escuchar en Gaitania</h3>
+            <p>Una tarde con tejedoras que explican el significado de cada figura. Visita guiada y acordada con la comunidad, siempre con respeto por sus tiempos.</p>
+            <ul class="postcard__lines">
+              <li><span>Duración</span>Media jornada</li>
+              <li><span>Con</span>Comunidad Nasa</li>
+              <li><span>Temporada</span>Previa reserva</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="postcard">
+          <figure class="ph postcard__ph" data-src="img/fotos/exp-4.jpg" data-label="Noche de fogón y relatos"><div class="ph__img"></div></figure>
+          <div class="postcard__body">
+            <div class="stamp" aria-hidden="true"><span>Planadas</span><b>IV</b><span>Tolima</span></div>
+            <svg class="postmark" viewBox="0 0 160 80" aria-hidden="true"><circle cx="40" cy="40" r="30"/><circle cx="40" cy="40" r="23"/><path d="M76 22 q12 -8 24 0 t24 0 t24 0 M76 34 q12 -8 24 0 t24 0 t24 0 M76 46 q12 -8 24 0 t24 0 t24 0 M76 58 q12 -8 24 0 t24 0 t24 0"/></svg>
+            <p class="label">Postal IV · Palabra</p>
+            <h3>Noche de fogón y relatos</h3>
+            <p>Cena campesina, música de cuerda y las historias de un territorio que hoy apuesta por la paz y por recibir a quien llega con curiosidad.</p>
+            <ul class="postcard__lines">
+              <li><span>Duración</span>Una noche</li>
+              <li><span>Con</span>Anfitriones locales</li>
+              <li><span>Temporada</span>Fines de semana</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ VII · EVENTOS ============ -->
+    <section class="events" id="eventos" data-section="Eventos" data-num="VII" data-ambience="strings">
+      <header class="events__head">
+        <p class="label"><span class="label__rule"></span>VII &nbsp;·&nbsp; Eventos</p>
+        <h2 class="display">Almanaque <em>de la montaña</em></h2>
+        <p class="events__note">Fechas de referencia — confirma cada año con la organización local.</p>
+      </header>
+
+      <div class="tickets">
+        <article class="ticket" data-src="img/fotos/evento-1.jpg" data-label="Fiestas de San Pedro">
+          <div class="ticket__stub"><span class="ticket__mon">Jun</span><span class="ticket__day">29</span></div>
+          <div class="ticket__main">
+            <h3>Fiestas de San Pedro</h3>
+            <p>Reinado, desfiles, cabalgata y sanjuanero en la plaza principal.</p>
+          </div>
+          <div class="ticket__info"><span>Lugar</span>Parque principal<span>Entrada</span>Libre</div>
+          <div class="ticket__code" aria-hidden="true"></div>
+        </article>
+
+        <article class="ticket" data-src="img/fotos/evento-2.jpg" data-label="Festival del café">
+          <div class="ticket__stub"><span class="ticket__mon">Oct</span><span class="ticket__day">—</span></div>
+          <div class="ticket__main">
+            <h3>Festival del Café Especial</h3>
+            <p>Concurso de taza, feria de productores, tostadores invitados y música en vivo.</p>
+          </div>
+          <div class="ticket__info"><span>Lugar</span>Cabecera municipal<span>Entrada</span>Libre</div>
+          <div class="ticket__code" aria-hidden="true"></div>
+        </article>
+
+        <article class="ticket" data-src="img/fotos/evento-3.jpg" data-label="Temporada de cosecha">
+          <div class="ticket__stub"><span class="ticket__mon">Abr</span><span class="ticket__day">Jun</span></div>
+          <div class="ticket__main">
+            <h3>Temporada de cosecha</h3>
+            <p>Las fincas se llenan de recolectores. El mejor momento para vivir el café de cerca.</p>
+          </div>
+          <div class="ticket__info"><span>Lugar</span>Veredas cafeteras<span>Entrada</span>Con reserva</div>
+          <div class="ticket__code" aria-hidden="true"></div>
+        </article>
+
+        <article class="ticket" data-src="img/fotos/evento-4.jpg" data-label="Mercado campesino">
+          <div class="ticket__stub"><span class="ticket__mon">Dom</span><span class="ticket__day">∞</span></div>
+          <div class="ticket__main">
+            <h3>Mercado campesino</h3>
+            <p>Cada domingo bajan de las veredas: frutas, quesillo, panela, café en grano y conversación.</p>
+          </div>
+          <div class="ticket__info"><span>Lugar</span>Plaza de mercado<span>Entrada</span>Libre</div>
+          <div class="ticket__code" aria-hidden="true"></div>
+        </article>
+
+        <article class="ticket" data-src="img/fotos/evento-5.jpg" data-label="Navidad en la montaña">
+          <div class="ticket__stub"><span class="ticket__mon">Dic</span><span class="ticket__day">16</span></div>
+          <div class="ticket__main">
+            <h3>Novenas y alumbrado</h3>
+            <p>Natilla, buñuelos y villancicos con tiple en las noches frías de diciembre.</p>
+          </div>
+          <div class="ticket__info"><span>Lugar</span>Barrios y veredas<span>Entrada</span>Libre</div>
+          <div class="ticket__code" aria-hidden="true"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ VIII · MAPA ============ -->
+    <section class="map" id="mapa" data-section="Mapa" data-num="VIII" data-ambience="wind">
+      <div class="map__grid">
+        <header class="map__head">
+          <p class="label label--light"><span class="label__rule"></span>VIII &nbsp;·&nbsp; Mapa</p>
+          <h2 class="display display--light">Cómo <em>llegar</em></h2>
+          <p class="lede lede--light">Planadas está en el extremo sur del Tolima, sobre la vertiente oriental de la Cordillera Central, cerca de los límites con Huila y Cauca.</p>
+
+          <ol class="routes-list">
+            <li><span class="routes-list__from">Desde Neiva</span><i></i><span class="routes-list__t">≈ 4 h</span></li>
+            <li><span class="routes-list__from">Desde Ibagué</span><i></i><span class="routes-list__t">≈ 6 h</span></li>
+            <li><span class="routes-list__from">Desde Bogotá</span><i></i><span class="routes-list__t">≈ 8 h</span></li>
+          </ol>
+          <p class="map__note">Tiempos aproximados por carretera. Consulta el estado de las vías antes de viajar.</p>
+        </header>
+
+        <div class="map__frame">
+          <div class="map__ticks" aria-hidden="true"></div>
+          <iframe
+            title="Mapa de Planadas, Tolima, Colombia"
+            src="https://maps.google.com/maps?q=Planadas,%20Tolima,%20Colombia&t=p&z=10&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map__compass" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="38"/><path d="M50 8 L56 50 L50 92 L44 50Z"/><path class="n" d="M50 8 L56 50 L44 50Z"/><text x="50" y="6">N</text></svg>
+          </div>
+          <p class="map__coord">3°11′ N — 75°39′ O</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IX · PLANEA TU VIAJE ============ -->
+    <section class="trip" id="viaje" data-section="Planea tu viaje" data-num="IX" data-ambience="forest">
+      <header class="trip__head">
+        <p class="label"><span class="label__rule"></span>IX &nbsp;·&nbsp; Planea tu viaje</p>
+        <h2 class="display">Todo listo <em>para subir</em></h2>
+        <p class="lede">El clima de hoy, la mejor época para venir y lo que conviene saber antes de tomar la carretera hacia la montaña.</p>
+      </header>
+
+      <div class="trip__top">
+        <!-- Clima en vivo -->
+        <article class="wx" id="wx" aria-live="polite">
+          <div class="wx__head">
+            <p class="wx__eyebrow"><span class="wx__dot"></span>Ahora en Planadas</p>
+            <p class="wx__time" id="wxTime">—</p>
+          </div>
+          <div class="wx__now">
+            <span class="wx__icon" id="wxIcon"></span>
+            <p class="wx__temp"><b id="wxTemp">—</b><sup>°C</sup></p>
+            <div class="wx__desc">
+              <p id="wxText">Cargando el clima…</p>
+              <p class="wx__feels"><span>Sensación</span> <b id="wxFeels">—</b></p>
+            </div>
+          </div>
+          <dl class="wx__meta">
+            <div><dt>Humedad</dt><dd id="wxHum">—</dd></div>
+            <div><dt>Viento</dt><dd id="wxWind">—</dd></div>
+            <div><dt>Lluvia hoy</dt><dd id="wxRain">—</dd></div>
+          </dl>
+          <ol class="wx__days" id="wxDays"></ol>
+          <p class="wx__src">Pronóstico: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> · cabecera municipal, ≈1.450 m</p>
+        </article>
+
+        <!-- Cuándo venir -->
+        <article class="season">
+          <h3 class="season__title">Cuándo <em>venir</em></h3>
+          <p class="season__intro">El año en la montaña tiene dos cosechas y dos temporadas de lluvia. Úsalo como referencia.</p>
+          <div class="season__grid" role="table" aria-label="Calendario de temporadas">
+            <div class="season__months" role="row">
+              <span></span>
+              <span>E</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span>
+              <span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+            </div>
+            <div class="season__row" role="row">
+              <span class="season__name">Cosecha de café</span>
+              <i style="--from:4;--to:7" class="season__bar season__bar--harvest"></i>
+              <i style="--from:10;--to:13" class="season__bar season__bar--harvest"></i>
+            </div>
+            <div class="season__row" role="row">
+              <span class="season__name">Más lluvias</span>
+              <i style="--from:4;--to:6" class="season__bar season__bar--rain"></i>
+              <i style="--from:10;--to:12" class="season__bar season__bar--rain"></i>
+            </div>
+            <div class="season__row" role="row">
+              <span class="season__name">Más seco</span>
+              <i style="--from:1;--to:3" class="season__bar season__bar--dry"></i>
+              <i style="--from:7;--to:9" class="season__bar season__bar--dry"></i>
+            </div>
+            <div class="season__row" role="row">
+              <span class="season__name">Fiestas</span>
+              <i style="--from:6;--to:7" class="season__bar season__bar--fest"></i>
+              <i style="--from:12;--to:13" class="season__bar season__bar--fest"></i>
+            </div>
+            <span class="season__now" id="seasonNow" aria-hidden="true"></span>
+          </div>
+          <p class="season__tip"><b>Nuestro consejo:</b> abril–junio u octubre–diciembre si quieres vivir la cosecha; junio, julio o enero si prefieres caminos más secos.</p>
+        </article>
+      </div>
+
+      <!-- Información práctica -->
+      <div class="guide">
+        <article class="guide__item">
+          <span class="guide__n">01</span>
+          <h3>Cómo llegar</h3>
+          <p>Por carretera desde Neiva, Ibagué o Chaparral. Hay buses intermunicipales y camperos; consulta horarios en las terminales y el estado de las vías antes de salir.</p>
+          <a href="#mapa" data-link class="guide__link">Ver el mapa</a>
+        </article>
+        <article class="guide__item">
+          <span class="guide__n">02</span>
+          <h3>Dónde dormir</h3>
+          <p>Hoteles alrededor del parque principal, hostales sencillos y fincas cafeteras que reciben huéspedes. Escríbenos y te conectamos con anfitriones locales.</p>
+          <a href="#contacto" data-link class="guide__link">Pedir recomendaciones</a>
+        </article>
+        <article class="guide__item">
+          <span class="guide__n">03</span>
+          <h3>Dónde comer</h3>
+          <p>Restaurantes de comida casera cerca de la plaza, la plaza de mercado para desayunar y, en las fincas, almuerzo de fogón con lo que da la tierra.</p>
+          <a href="#comida" data-link class="guide__link">Ver la carta</a>
+        </article>
+        <article class="guide__item">
+          <span class="guide__n">04</span>
+          <h3>Dinero y señal</h3>
+          <p>Lleva efectivo: en las veredas casi no se paga con tarjeta. La señal de celular es buena en la cabecera y puede fallar en las zonas altas.</p>
+        </article>
+        <article class="guide__item">
+          <span class="guide__n">05</span>
+          <h3>Salud y cuidado</h3>
+          <p>Hay servicios de salud en la cabecera municipal. Camina con guía local en rutas largas, hidrátate y usa protector solar: el sol de montaña engaña.</p>
+        </article>
+        <article class="guide__item">
+          <span class="guide__n">06</span>
+          <h3>Respeto por el territorio</h3>
+          <p>Pide permiso antes de fotografiar a las personas, visita el territorio Nasa solo con acompañamiento de la comunidad y llévate tu basura de regreso.</p>
+        </article>
+      </div>
+
+      <!-- Maleta -->
+      <div class="pack">
+        <div class="pack__intro">
+          <h3 class="pack__title">Tu <em>maleta</em></h3>
+          <p>Marca lo que ya empacaste. La lista se guarda en este navegador.</p>
+          <p class="pack__count"><b id="packCount">0</b> / <span id="packTotal">0</span> <span class="pack__done" id="packDone">¡Listo para subir!</span></p>
+          <a class="btn-line" href="#contacto" data-link>Planear mi visita</a>
+        </div>
+        <ul class="pack__list" id="packList">
+          <li><label><input type="checkbox" value="chaqueta"><span>Chaqueta ligera para las noches</span></label></li>
+          <li><label><input type="checkbox" value="impermeable"><span>Impermeable o paraguas</span></label></li>
+          <li><label><input type="checkbox" value="botas"><span>Zapatos o botas para caminar</span></label></li>
+          <li><label><input type="checkbox" value="sol"><span>Protector solar y gorra</span></label></li>
+          <li><label><input type="checkbox" value="repelente"><span>Repelente de insectos</span></label></li>
+          <li><label><input type="checkbox" value="efectivo"><span>Efectivo en billetes pequeños</span></label></li>
+          <li><label><input type="checkbox" value="documento"><span>Documento de identidad</span></label></li>
+          <li><label><input type="checkbox" value="botella"><span>Botella de agua reutilizable</span></label></li>
+          <li><label><input type="checkbox" value="bateria"><span>Batería externa para el celular</span></label></li>
+          <li><label><input type="checkbox" value="curiosidad"><span>Ganas de probar café recién tostado</span></label></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ X · CONTACTO ============ -->
+    <section class="contact" id="contacto" data-section="Contacto" data-num="X" data-ambience="forest">
+      <div class="contact__grid">
+        <div class="contact__intro">
+          <p class="label"><span class="label__rule"></span>X &nbsp;·&nbsp; Contacto</p>
+          <h2 class="contact__big">Ven a<br><em>Planadas</em></h2>
+          <div class="contact__data">
+            <p><span>Correo</span><a href="mailto:hola@visitaplanadas.co">hola@visitaplanadas.co</a></p>
+            <p><span>Instagram</span><a href="#">@visitaplanadas</a></p>
+            <p><span>Oficina</span>Parque principal · Planadas, Tolima</p>
+          </div>
+        </div>
+
+        <form class="letter" id="letter" novalidate>
+          <p class="letter__date">Planadas, Tolima — <span id="letterDate"></span></p>
+          <p class="letter__greet"><em>Querida montaña:</em></p>
+
+          <p class="letter__line">Me llamo
+            <label class="field"><input type="text" name="nombre" required placeholder="tu nombre" autocomplete="name"></label>
+            y me pueden escribir a
+            <label class="field"><input type="email" name="correo" required placeholder="tu correo" autocomplete="email"></label>
+          </p>
+          <p class="letter__line">Quisiera visitarles en
+            <label class="field field--sm"><input type="text" name="fecha" placeholder="mes o fecha"></label>
+            con
+            <label class="field field--xs"><input type="number" name="personas" min="1" placeholder="2"></label>
+            personas, y me gustaría vivir:
+          </p>
+
+          <div class="chips">
+            <label><input type="checkbox" name="interes" value="Ruta cafetera"><span>Ruta cafetera</span></label>
+            <label><input type="checkbox" name="interes" value="Cata de café"><span>Cata de café</span></label>
+            <label><input type="checkbox" name="interes" value="Cultura Nasa"><span>Cultura Nasa</span></label>
+            <label><input type="checkbox" name="interes" value="Cocina de fogón"><span>Cocina de fogón</span></label>
+            <label><input type="checkbox" name="interes" value="Eventos"><span>Eventos</span></label>
+          </div>
+
+          <label class="field field--area"><textarea name="mensaje" rows="3" placeholder="Algo más que quieras contarnos…"></textarea></label>
+
+          <div class="letter__sign">
+            <button type="submit" class="btn-seal"><span>Enviar carta</span></button>
+            <p class="letter__ok" id="letterOk" hidden><em>Carta recibida.</em> Te responderemos pronto desde la montaña.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="flagline flagline--wide" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="footer__logo" src="img/logo-256.png" width="256" height="256" alt="Planadas — café, naturaleza, personas" loading="lazy">
+          <p class="footer__lead">Un viaje al sur del Tolima, <em>donde la montaña se sirve en taza.</em></p>
+          <a href="#contacto" class="btn-line btn-line--light" data-link>Planear mi visita</a>
+        </div>
+
+        <nav class="footer__col" aria-label="Índice del sitio">
+          <p class="footer__title">Índice</p>
+          <ul>
+            <li><a href="#inicio" data-link><span>I</span>Inicio</a></li>
+            <li><a href="#parque" data-link><span>II</span>Parque central</a></li>
+            <li><a href="#rutas" data-link><span>III</span>Rutas cafeteras</a></li>
+            <li><a href="#cultura" data-link><span>IV</span>Cultura</a></li>
+            <li><a href="#comida" data-link><span>V</span>Comida</a></li>
+            <li><a href="#experiencias" data-link><span>VI</span>Experiencias</a></li>
+            <li><a href="#eventos" data-link><span>VII</span>Eventos</a></li>
+            <li><a href="#mapa" data-link><span>VIII</span>Mapa</a></li>
+            <li><a href="#viaje" data-link><span>IX</span>Planea tu viaje</a></li>
+            <li><a href="#contacto" data-link><span>X</span>Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <p class="footer__title">Para el viajero</p>
+          <ul>
+            <li><a href="#mundo" data-link>Dónde queda Planadas</a></li>
+            <li><a href="#origen" data-link>Película del territorio</a></li>
+            <li><a href="#mapa" data-link>Cómo llegar</a></li>
+            <li><a href="#eventos" data-link>Temporadas de cosecha</a></li>
+            <li><a href="#experiencias" data-link>Turismo comunitario</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__title">Contacto</p>
+          <ul class="footer__contact">
+            <li><a href="mailto:hola@visitaplanadas.co">hola@visitaplanadas.co</a></li>
+            <li><a href="#">Instagram · @visitaplanadas</a></li>
+            <li>Parque principal<br>Planadas, Tolima · Colombia</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__word" aria-hidden="true">Planadas</p>
+
+      <details class="credits">
+        <summary>Créditos de fotografía, sonido y mapas</summary>
+        <div class="credits__body">
+          <p>Fotografías y grabaciones de <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>, usadas según sus licencias libres. Algunas imágenes son ilustrativas de Colombia y no fueron tomadas en Planadas.</p>
+          <p class="credits__h">Fotografía</p>
+          <ul>
+            <li><span>img/fotos/comida-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Lechona_en_Honda.jpg" target="_blank" rel="noopener">Lechona en Honda</a> — Remux · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Tamal_tolimense_abierto.jpg" target="_blank" rel="noopener">Tamal tolimense abierto</a> — JOAN · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-3.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Sancocho_de_gallina_yopal.jpg" target="_blank" rel="noopener">Sancocho de gallina yopal</a> — Daniestrella123 · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-4.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Bollo_de_mazorca.jpg" target="_blank" rel="noopener">Bollo de mazorca</a> — Jdvillalobos · CC BY 3.0</li>
+            <li><span>img/fotos/comida-5.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Arepa_asada.JPG" target="_blank" rel="noopener">Arepa asada</a> — Kazem (Wikipedia en Español/Wikipedia in Spanish) · CC BY-SA 3.0</li>
+            <li><span>img/fotos/comida-6.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Bizcocho_de_achira.png" target="_blank" rel="noopener">Bizcocho de achira</a> — Tyrion Altamira · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-7.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Insulsos.jpg" target="_blank" rel="noopener">Insulsos</a> — WIKIRAICES · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-8.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_on_the_surface._01.jpg" target="_blank" rel="noopener">Roasted coffee beans on the surface. 01</a> — A S M Jobaer · CC BY-SA 4.0</li>
+            <li><span>img/fotos/comida-9.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Black_coffee_on_wooden_table_outdoors._(51528275111).jpg" target="_blank" rel="noopener">Black coffee on wooden table outdoors. (51528275111)</a> — Nenad Stojkovic · CC BY 2.0</li>
+            <li><span>img/fotos/contacto.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:S%C3%ADtio_Las_Mar%C3%ADas,_Vda_la_Ilusi%C3%B3n._Planadas_Tolima.jpg" target="_blank" rel="noopener">Sítio Las Marías, Vda la Ilusión. Planadas Tolima</a> — Miguelysara284 · CC BY-SA 4.0</li>
+            <li><span>img/fotos/cultura-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:BAMBUCO_COLOMBIANO.jpg" target="_blank" rel="noopener">BAMBUCO COLOMBIANO</a> — Beamendo1 · CC BY-SA 4.0</li>
+            <li><span>img/fotos/cultura-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Ritual_sagrado_del_Saakhelu_(realizado_por_el_pueblo_ind%C3%ADgena_nasa)_en_el_resguardo_de_Jambal%C3%B3_(Cauca_-_Colombia),_vereda_Buena_Vista_-_La_Marqueza._Agosto_de_2018.jpg" target="_blank" rel="noopener">Ritual sagrado del Saakhelu (realizado por el pueblo indígena nasa) en el resguardo de Jambaló (Cauca - Colombia), vereda Buena Vista - La Marqueza. Agosto de 2018</a> — Fabiammoreno · CC BY-SA 4.0</li>
+            <li><span>img/fotos/cultura-3.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Hecho_con_las_manos_de_un_arhuaca.jpg" target="_blank" rel="noopener">Hecho con las manos de un arhuaca</a> — Iandrescamilo · CC BY-SA 4.0</li>
+            <li><span>img/fotos/cultura-4.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Monumento_Sanjuanero.jpg" target="_blank" rel="noopener">Monumento Sanjuanero</a> — Centenoyespelta · CC BY-SA 4.0</li>
+            <li><span>img/fotos/evento-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Reina_del_Sanjuanero_Monta%C3%B1itense_2.jpg" target="_blank" rel="noopener">Reina del Sanjuanero Montañitense 2</a> — Duberb · CC BY-SA 4.0</li>
+            <li><span>img/fotos/evento-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Granos_de_cafe_cultivado_en_Colombia.jpg" target="_blank" rel="noopener">Granos de cafe cultivado en Colombia</a> — Jeandreachacon · CC BY-SA 4.0</li>
+            <li><span>img/fotos/evento-3.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Coffee_tree_with_many_coffee-cherries_growing_on_it_(by_Brian_Smith).jpg" target="_blank" rel="noopener">Coffee tree with many coffee-cherries growing on it (by Brian Smith)</a> — U. S. Fish and Wildlife Service - Northeast Region · Public domain</li>
+            <li><span>img/fotos/evento-4.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Canasta_de_guayaba_verde_en_la_plaza_de_mercado_Minorista_de_Medell%C3%ADn.jpg" target="_blank" rel="noopener">Canasta de guayaba verde en la plaza de mercado Minorista de Medellín</a> — TEspiral · CC BY-SA 4.0</li>
+            <li><span>img/fotos/evento-5.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Christmas_lights,_Sons%C3%B3n_Antioquia.jpg" target="_blank" rel="noopener">Christmas lights, Sonsón Antioquia</a> — User:mauricio agudelo · Public domain</li>
+            <li><span>img/fotos/exp-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Coffee_cherries_of_varying_ripeness,_on_a_tree_in_Colombia_(by_Brian_Smith).jpg" target="_blank" rel="noopener">Coffee cherries of varying ripeness, on a tree in Colombia (by Brian Smith)</a> — U. S. Fish and Wildlife Service - Northeast Region · Public domain</li>
+            <li><span>img/fotos/exp-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Coffee_Cupping-1.jpg" target="_blank" rel="noopener">Coffee Cupping-1</a> — Visitor7 · CC BY-SA 3.0</li>
+            <li><span>img/fotos/exp-3.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:M%C3%BAsicos_ind%C3%ADgenas_del_pueblo_nasa_(Jambal%C3%B3_-_Cauca_-_Colombia).jpg" target="_blank" rel="noopener">Músicos indígenas del pueblo nasa (Jambaló - Cauca - Colombia)</a> — Fabiammoreno · CC BY-SA 4.0</li>
+            <li><span>img/fotos/exp-4.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Fog%C3%B3n_de_le%C3%B1a,_comida_t%C3%ADpica_simacotera.JPG" target="_blank" rel="noopener">Fogón de leña, comida típica simacotera</a> — Manale1201 · CC BY-SA 4.0</li>
+            <li><span>img/fotos/hero.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Cultivos_de_Caf%C3%A9_Gaitania.JPG" target="_blank" rel="noopener">Cultivos de Café Gaitania</a> — Difefoga · CC BY-SA 4.0</li>
+            <li><span>img/fotos/manifiesto-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Grano_de_caf%C3%A9_Gaitania.JPG" target="_blank" rel="noopener">Grano de café Gaitania</a> — Difefoga · CC BY-SA 4.0</li>
+            <li><span>img/fotos/manifiesto-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:NP_colombia_coffee_drying_(5867167147).jpg" target="_blank" rel="noopener">NP colombia coffee drying (5867167147)</a> — CIAT · CC BY-SA 2.0</li>
+            <li><span>img/fotos/mapa.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Nevado_del_Huila_aerial.jpg" target="_blank" rel="noopener">Nevado del Huila aerial</a> — Alessandro Verniani · CC BY-SA 4.0</li>
+            <li><span>img/fotos/ruta-1.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Planadas_Tolima.jpg" target="_blank" rel="noopener">Planadas Tolima</a> — Felviper · CC BY-SA 4.0</li>
+            <li><span>img/fotos/ruta-2.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Gaitania.JPG" target="_blank" rel="noopener">Panorámica de Gaitania</a> — Difefoga · CC BY-SA 4.0</li>
+            <li><span>img/fotos/ruta-3.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Ca%C3%B1%C3%B3n_R%C3%ADo_Ata.jpg" target="_blank" rel="noopener">Cañón Río Ata</a> — Miguelysara284 · CC BY-SA 4.0</li>
+            <li><span>img/fotos/ruta-4.jpg</span> <a href="https://commons.wikimedia.org/wiki/File:Cultivo_de_caf%C3%A9_Tolima.jpg" target="_blank" rel="noopener">Cultivo de café Tolima</a> — Kevin Santiago Gonzalez · CC BY-SA 4.0</li>
+          </ul>
+          <p class="credits__h">Sonido</p>
+          <ul>
+            <li><span>audio/bosque.mp3</span> <a href="https://commons.wikimedia.org/wiki/File:Turdus_fuscater_-_Great_Thrush_XC243219.mp3" target="_blank" rel="noopener">Turdus fuscater - Great Thrush XC243219</a> — Niels Krabbe · CC BY-SA 4.0</li>
+            <li><span>audio/rio.mp3</span> <a href="https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav" target="_blank" rel="noopener">433589 jackthemurray stream-river-water-up-close</a> — jackthemurray · CC0</li>
+            <li><span>audio/cuerdas-1922.mp3</span> <a href="https://commons.wikimedia.org/wiki/File:Jorge_%C3%81%C3%B1ez_Avenda%C3%B1o_and_Alcides_Brice%C3%B1o_performing_%22Ingrata%22_in_December_1922.mp3" target="_blank" rel="noopener">Jorge Áñez Avendaño and Alcides Briceño performing &quot;Ingrata&quot; in December 1922</a> — Jorge Áñez Avendaño (1892–1952), and Alcides Briceño (per… · Public domain</li>
+            <li><span>Viento, fogón y cuerdas del índice</span> sintetizados en el navegador.</li>
+          </ul>
+          <p class="credits__h">Mapas</p>
+          <ul>
+            <li><span>Globo satelital</span> Esri World Imagery — Esri, Maxar, Earthstar Geographics · globe.gl / three-globe (NASA Blue Marble)</li>
+            <li><span>Fronteras</span> Natural Earth vía world-atlas · <span>Mapa interactivo</span> Google Maps</li>
+            <li><span>Película</span> img/gemini_generated_video_d410e3ed.mp4</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="footer__row">
+        <p>© <span id="year"></span> Planadas · Tolima · Colombia</p>
+        <p><em>Hecho con café de origen</em></p>
+        <a href="#inicio" data-link>Volver a la cima ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

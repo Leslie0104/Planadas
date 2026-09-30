@@ -1,0 +1,19 @@
+FOTOS DE LA PÁGINA — PLANADAS
+Las fotos actuales vienen de Wikimedia Commons con licencias libres (CC BY, CC BY-SA,
+CC0 o dominio público). Los autores aparecen en el pie de página, en "Créditos".
+Si reemplazas una foto por una tuya, borra o actualiza su línea de créditos en index.html.
+
+Para cambiar una foto, guarda la nueva con el MISMO nombre:
+
+Inicio ............ hero.jpg (vertical)
+Manifiesto ........ manifiesto-1.jpg, manifiesto-2.jpg
+Rutas ............. ruta-1.jpg ... ruta-4.jpg
+Cultura ........... cultura-1.jpg ... cultura-4.jpg
+Comida ............ comida-1.jpg ... comida-9.jpg
+Experiencias ...... exp-1.jpg ... exp-4.jpg
+Eventos ........... evento-1.jpg ... evento-5.jpg
+Parque central .... iglesia 1.jpeg (entrada), iglesia.jpg, estatua_1.jpg, estatua_2.jpg, estatua_3.jpg
+Menú (índice) ..... mapa.jpg, contacto.jpg
+
+SONIDOS (carpeta audio/): bosque.mp3, rio.mp3, cuerdas-1922.mp3
+Para cambiar qué suena en cada sección, edita FILES al inicio de js/sound.js.
